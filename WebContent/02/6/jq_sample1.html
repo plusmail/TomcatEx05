@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>
+<script src="js/jquery.js"></script>
+<script>
+	function colorChange(){
+		var ccc = document.getElementById("color1").value;
+		var ddd = document.getElementById("border").value;
+		$("#tilte").css("color",ccc);
+		$("#div1").css("border",ddd);
+	};
+
+</script>
+</head>
+<body>
+	<h1 id="title">제목</h1>
+	<div id="div1"></div>
+	<input id="color1"  value="blue">
+	<input id="border"  value="1px solid #333">
+	<button onClick="colorChange();">확인</button>
+	<div>dsdfsdfsdfdf</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 중첩 if문 </title>
+<script>
+	var colra =2000;
+	var sidar = 1500;
+	var vabocon = 1200;
+	alert("1 콜라: 2000 2 사이다 : 1500  3 vabocon : 1200 고르세요!!")
+	var meprice = prompt("금액을 입력 하세요.", "0");
+
+	if((meprice >= colra) || (meprice >= sidar) || (meprice >= vabocon)){
+		alert("모든 상품을 구매할수 있습니다.");
+		var selitem = prompt("상품을 선택하세요.", "0");
+		if(selitem == "1")
+		{
+			if(meprice >= colra)
+			{
+				var j1 = meprice - colra;
+				alert("콜라를 구매 완료 했습니다..잔액은 "+ j1 +"입니다.");
+			}
+		}
+		else if(selitem == "2")
+		{
+			if(meprice >= sidar)
+			{
+				var j1 = meprice - sidar;
+				alert("사이다를 구매 완료 했습니다..잔액은 "+ j1 +"입니다.");
+			}
+		}
+		else if(selitem == "3")
+		{
+			if(meprice >= vabocon)
+			{
+				var j1 = meprice - vabocon;
+				alert("바보콘을 구매 완료 했습니다..잔액은 "+ j1 +"입니다.");
+			}
+		}
+
+	}
+	else if(meprice >= colra)
+	{
+		alert("콜라를 구매 할 수 있습니다.");
+		var selitem = prompt("상품을 선택하세요.", "0");
+		if(selitem == "1")
+		{
+			if(meprice >= colra)
+			{
+				var j1 = meprice - colra;
+				alert("콜라를 구매 완료 했습니다..잔액은 "+ j1 +"입니다.");
+			}
+		}
+	}
+	else if(meprice >= sidar)
+	{
+		var selitem = prompt("상품을 선택하세요.", "0");
+		if(selitem == "2")
+		{
+			if(meprice >= sidar)
+			{
+				var j1 = meprice - sidar;
+				alert("사이다를 구매 완료 했습니다..잔액은 "+ j1 +"입니다.");
+			}
+		}
+	}
+	else if(meprice >= vabocon)
+	{
+		var selitem = prompt("상품을 선택하세요.", "0");
+		if(selitem == "3")
+		{
+			if(meprice >= vabocon)
+			{
+				var j1 = meprice - vabocon;
+				alert("바보콘을 구매 완료 했습니다..잔액은 "+ j1 +"입니다.");
+			}
+		}
+	}
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 문자 객체 </title>
+<script>
+	var userEmail = prompt("당신의 이메일 주소는?", "");
+	var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+	var check1 = false;
+	var check2 = false;
+	var lowUserEmail=userEmail.toLowerCase();
+	var e1 = userEmail.split("@");
+	var eIndex;
+	for(var i=0; i < arrUrl.length;i++)
+	{
+		if(userEmail.search(arrUrl[i]) > 0)
+		{
+			check1 = true;
+		}
+	}
+
+	document.write(lowUserEmail +"<br>");
+	document.write(e1[0] +"<br>");
+	document.write(e1[1] +"<br>");
+	
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

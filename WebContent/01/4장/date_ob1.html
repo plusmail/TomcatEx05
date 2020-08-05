@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset = "UTF-8">
+	<title> 날짜 정보 객체 </title>
+	<script>
+	var today = new Date();
+	var nowMonth = today.getMonth( ),
+					nowDate = today.getDate( ),
+					nowDay = today.getDay( );
+	var birth_year = prompt("출생년도는?","");
+	var birth_month = prompt('출생월',"0");
+	var birth_day = prompt("출생일","0");
+
+	var birth_ymd = new Date(birth_year, birth_month, birth_day);
+	var diff = Math.abs(today - birth_ymd) ;
+		diff = Math.ceil(diff / (1000 * 3600 * 24));
+	alert(birth_ymd.getTime()/(1000 * 3600 * 24));
+    console.log(birth_ymd.getTime());
+
+	</script>
+</head>
+<body>
+</body>
+</html>

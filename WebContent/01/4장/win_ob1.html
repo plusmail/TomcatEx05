@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> window 객체 </title>
+<style>
+html{
+	overflow: hidden;
+}
+</style>
+<script>
+function popitup(url) {
+  newwindow=window.open(url, 'name', 'toolbar=1,scrollbars=0,location=1,statusbar=0,menubar=1,resizable=0,width=400,height=400');
+  if (window.focus) {
+    newwindow.focus()
+  }
+  return false;
+}
+
+var aa = popitup("http://www.google.co.kr");
+</script>
+</head>
+<body>
+	<button onclick="window.open('winpopup.html', '_blank')" />
+    <h1>이지스 퍼블리싱</h1>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수 </title>
+<script>
+	function PhoneBook(name, age, phoneNumber) {
+		this.userName = name;
+		this.userAge = age;
+		this.userPhoneNumber = phoneNumber;
+		this.chPhoneNumber;
+
+		this.getInfo = function() {
+			var str = ""
+				str += "이름: " + this.userName + ", ";
+				str += "나이: " + this.userAge + ", ";
+				str += "전화번호: " + this.userPhoneNumber + "<br>";
+				return  str;
+		}
+		this.getPhoneNumber = function( ) {
+			var str =new String(this.userPhoneNumber).split("-");
+			return str;
+		}
+	}
+
+	var jang = new PhoneBook("장보리", 39, "010-4801-0797");
+	var arr1 = jang.getPhoneNumber();
+	console.log(jang);
+
+	document.write(jang.getInfo()+"<br>");
+	document.write("국번은: " + arr1[0]+"마지막 4자리는:"+ arr1[2] +"<br>");
+
+	var park = new PhoneBook("박달재", 19, "010-555-1333");
+	console.log(park);
+	document.write(park.getInfo()+"<br>");
+	document.write(park.getPhoneNumber()+"<br>");
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 탐색 선택자 </title>  
+<script src="js/jquery.js"></script>
+<script>
+	$(function(){
+		var arr1 = ["홍길동", "010-121", "a@a.co.kr", "전주","대구"];
+		var arr2 = ["한국", "미국", "일본", "중국"];
+		var obj = {
+			"name":"정부장", 
+			"area":"서울",
+			"tel":"010-4801"
+		}
+		
+		var idxNum = $.inArray("010-121", arr1);
+		console.log(idxNum);
+
+		var okArray1 = $.isArray(arr1);
+		var okArray2 = $.isArray(obj);
+
+		for(var i=0; i < arr1.length;i++)
+		{
+			console.log(arr1[i]);
+		}	
+
+		console.log(obj.name);
+		console.log(obj["area"]);
+		obj.tel ="011-4444";
+		console.log(obj.tel);
+
+
+		console.log(okArray1);
+		console.log(okArray2);
+
+		$.merge(arr2, arr1);
+		console.log(arr2);
+	});
+</script>
+</head>
+<body>
+</body>
+</html>
